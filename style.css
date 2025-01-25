@@ -5,6 +5,14 @@ header {
    padding: 20px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
  /* The navbar container */
 .topnav {
   overflow: hidden;
@@ -26,23 +34,6 @@ header {
   background-color: #fdffd2;
   color: black;
 } 
-
-/*creating the two-column layout*/
-*{
-   box-sizing: border-box;
-}
-.row {
-   display: flex;
-   flex-wrap: wrap;
-}
-.post-text-box {
-   flex: 70%;
-   padding: 20px;
-}
-.profile {
-   flex: 70%;
-   padding: 20px;
-}
 
 /*font*/
 *{
