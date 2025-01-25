@@ -1,14 +1,32 @@
 /*header style*/
 header {
+   background-color: #feffe4;
    text-align: center; 
    padding: 20px;
 }
-/*navigation menu style*/
-nav {
-   text-align: center;
-   word-spacing: 30px;
-   Padding: 10px;
+
+ /* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} 
+
 /*creating the two-column layout*/
 *{
    box-sizing: border-box;
@@ -25,10 +43,12 @@ nav {
    flex: 70%;
    padding: 20px;
 }
+
 /*font*/
 *{
    font-family: Arial, Helvetica, sans-serif;
 }
+
 /*profile image and heading style*/
 .profile img {
    width: 120px;
