@@ -25,6 +25,10 @@ nav {
    flex: 70%;
    padding: 20px;
 }
+/*font*/
+*{
+   font-family: Arial, Helvetica, sans-serif;
+}
 /*profile image and heading style*/
 .profile img {
    width: 120px;
