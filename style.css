@@ -9,8 +9,12 @@ header {
   box-sizing: border-box;
 }
 
-h1 {
+h {
   margin: 20px;
+}
+
+p {
+   margin: 20px;
 }
 
  /* The navbar container */
