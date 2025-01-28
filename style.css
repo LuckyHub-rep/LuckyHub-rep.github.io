@@ -9,6 +9,7 @@ header {
   box-sizing: border-box;
 }
 
+/* margins for text */
 h1 {
   margin: 20px;
 }
