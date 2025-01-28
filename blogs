@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <header>
+         <h1>Mijn Persoonlijke Blog</h1>
+      </header>
+      <div class="topnav">
+         <a href="https://luckyhub-rep.github.io/">Home</a>
+         <a href="https://luckyhub-rep.github.io/blogs">Blogs</a>
+         <a href="https://luckyhub-rep.github.io/about">About</a>
+      </div>
+     <main>
+         <h2>Test</h2>
+     </main>
+     <footer>
+     </footer>
+   </body>
+</html>
