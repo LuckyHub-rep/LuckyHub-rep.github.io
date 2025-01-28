@@ -2,10 +2,7 @@
 header {
    background-color: #feffe4;
    text-align: center;
-}
-
-* {
-   margin: 0px;
+   padding: 20px;
 }
 
  /* The navbar container */
