@@ -37,27 +37,22 @@ header {
 }
 
 /*profile image and heading style*/
-.profile img {
-   display: block;
-   margin-left: 0;
-   margin-right: 0;
-}
-.profile p {
+p {
    margin-right: 20px;
 }
-.profile h1 {
+h1 {
    text-align: center,
    font-size: 22px;
 }
-.profile h2 {
+h2 {
    margin-right: 20px;
 }
-.profile h3 {
+h3 {
    margin-right: 20px;
 }
-.profile h4 {
+h4 {
    margin-right: 20px;
 }
-.profile h5 {
+h5 {
    margin-right: 20px;
 }
