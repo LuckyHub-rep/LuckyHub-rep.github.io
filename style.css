@@ -43,5 +43,6 @@ header {
    margin-right: 0;
 }
 .profile h1 {
-   text-align: center;
+   text-align: center,
+   font-size: 22px;
 }
