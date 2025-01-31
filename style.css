@@ -14,8 +14,6 @@ body {
 .row {
   display: flex;
   background-color: White;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .row > div {
