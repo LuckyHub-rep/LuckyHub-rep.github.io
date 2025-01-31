@@ -10,6 +10,19 @@ body {
    margin: 0px;
 }
 
+/* The Text container */
+.row {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.row > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
  /* The navbar container */
 .topnav {
   overflow: hidden;
