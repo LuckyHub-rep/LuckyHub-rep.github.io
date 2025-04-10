@@ -8,17 +8,31 @@
          <h1>ARE WE RAIDING TODAY?</h1>
       </header>
       <main>
-           <script>
+         <p id="raiding"></p>
+<script>
 let text;
 const d = new Date();
-if ([2, 3, 5].includes(d.getDay())) {
-  text = "Yes";
+
+// Format: [day, month (0-based), year]
+const specialDates = [
+  [11, 3, 2025], // 11 April 2025
+  [16, 3, 2025] // 16 April 2025
+];
+
+const today = [d.getDate(), d.getMonth(), d.getFullYear()];
+
+const isSpecialDate = specialDates.some(date =>
+  date[0] === today[0] && date[1] === today[1] && date[2] === today[2]
+);
+
+if (isSpecialDate) {
+  text = "YES";
 } else {
-  text = "No";
+  text = "NO";
 }
+
 document.getElementById("raiding").innerHTML = text;
 </script>
-         <p id="raiding"></p>
      </main>
      <footer>
        <h5>Next raid day: </h5>
