@@ -35,39 +35,36 @@ document.getElementById("raiding").innerHTML = text;
 </script>
      </main>
      <footer>
-<div id="upcoming"></div>
+   <div id="next-date"></div>
 <script>
-const d = new Date();
-const today = new Date(d.getFullYear(), d.getMonth(), d.getDate()); // strip time part
+const currentDate = new Date();
+const strippedToday = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
 
-// Format: [day, month (0-based), year] — European style
-const specialDates = [
+// Special dates in [day, month (0-based), year] — European format
+const upcomingSpecialDates = [
   [15, 3, 2025], // 15 April 2025
   [25, 11, 2025], // 25 December 2025
-  [1, 0, 2026] // 1 January 2026 (optional extra)
+  [1, 0, 2026]    // 1 January 2026
 ];
 
-// Convert specialDates to actual Date objects
-const dateObjects = specialDates.map(date => new Date(date[2], date[1], date[0]));
+// Convert to Date objects
+const upcomingDateObjects = upcomingSpecialDates.map(dateParts => new Date(dateParts[2], dateParts[1], dateParts[0]));
 
-// Filter future dates only
-const upcomingDates = dateObjects.filter(date => date >= today);
+// Filter and sort to find next one
+const futureDates = upcomingDateObjects.filter(date => date >= strippedToday);
+futureDates.sort((a, b) => a - b);
 
-// Sort by soonest
-upcomingDates.sort((a, b) => a - b);
-
-// Get the next upcoming date (if any)
-let text;
-if (upcomingDates.length > 0) {
-  const nextDate = upcomingDates[0];
-  const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  const formatted = nextDate.toLocaleDateString('en-GB', options); // dd/mm/yyyy
-  text = `Next special date is: <strong>${formatted}</strong>`;
+let upcomingText;
+if (futureDates.length > 0) {
+  const nextSpecialDate = futureDates[0];
+  const dateFormatOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const formattedDate = nextSpecialDate.toLocaleDateString('en-GB', dateFormatOptions); // dd/mm/yyyy
+  upcomingText = `Next special date is: <strong>${formattedDate}</strong>`;
 } else {
-  text = "No upcoming special dates.";
+  upcomingText = "No upcoming special dates.";
 }
 
-document.getElementById("upcoming").innerHTML = text;
+document.getElementById("next-date").innerHTML = upcomingText;
 </script>
      </footer>
    </body>
