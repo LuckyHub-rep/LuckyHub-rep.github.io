@@ -8,13 +8,16 @@
          <h1>ARE WE RAIDING TODAY?</h1>
       </header>
       <main>
-            <script>
+           <script>
+let text;
 const d = new Date();
-               if d.getDay() = 2 OR 3 OR 5
-                  document.getElementById("raiding").innerHTML = YES;
-               else
-                  document.getElementById("raiding").innerHTML = NO;
-            </script>
+if ([2, 3, 5].includes(d.getDay())) {
+  text = "Yes";
+} else {
+  text = "No";
+}
+document.getElementById("raiding").innerHTML = text;
+</script>
          <p id="raiding"></p>
      </main>
      <footer>
