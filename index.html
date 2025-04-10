@@ -38,6 +38,7 @@ if (isTodaySpecial) {
 } else {
   raiding = "NO";
 }
+document.getElementById("raiding").innerHTML = raiding;
 
 // === Feature 2: Find the next upcoming special date
 const futureSpecialDates = specialDateObjs.filter(date => date >= todayOnly);
@@ -54,9 +55,7 @@ if (futureSpecialDates.length > 0) {
 }
 
 // === Final Output
-document.getElementById("combined-output").innerHTML = `
-  ${raiding}<br>${nextDateText}
-`;
+document.getElementById("nextDateText").innerHTML = nextDateText;
 </script>
 
      </footer>
