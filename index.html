@@ -62,12 +62,12 @@ if (upcomingDates.length > 0) {
   const nextDate = upcomingDates[0];
   const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
   const formatted = nextDate.toLocaleDateString('en-GB', options); // dd/mm/yyyy
-  text2 = `Next special date is: <strong>${formatted}</strong>`;
+  text = `Next special date is: <strong>${formatted}</strong>`;
 } else {
-  text2 = "No upcoming special dates.";
+  text = "No upcoming special dates.";
 }
 
-document.getElementById("upcoming").innerHTML = text2;
+document.getElementById("upcoming").innerHTML = text;
 </script>
      </footer>
    </body>
