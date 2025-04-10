@@ -10,6 +10,11 @@ body {
    margin: 0px;
 }
 
+main {
+   background-color: #23ff00;
+   text-align: center;
+}
+
 /* The Text container */
 .row {
   display: flex;
