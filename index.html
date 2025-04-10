@@ -35,7 +35,40 @@ document.getElementById("raiding").innerHTML = text;
 </script>
      </main>
      <footer>
-       <h5>Next raid day: </h5>
+<div id="upcoming"></div>
+<script>
+const d = new Date();
+const today = new Date(d.getFullYear(), d.getMonth(), d.getDate()); // strip time part
+
+// Format: [day, month (0-based), year] — European style
+const specialDates = [
+  [15, 3, 2025], // 15 April 2025
+  [25, 11, 2025], // 25 December 2025
+  [1, 0, 2026] // 1 January 2026 (optional extra)
+];
+
+// Convert specialDates to actual Date objects
+const dateObjects = specialDates.map(date => new Date(date[2], date[1], date[0]));
+
+// Filter future dates only
+const upcomingDates = dateObjects.filter(date => date >= today);
+
+// Sort by soonest
+upcomingDates.sort((a, b) => a - b);
+
+// Get the next upcoming date (if any)
+let text;
+if (upcomingDates.length > 0) {
+  const nextDate = upcomingDates[0];
+  const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const formatted = nextDate.toLocaleDateString('en-GB', options); // dd/mm/yyyy
+  text2 = `Next special date is: <strong>${formatted}</strong>`;
+} else {
+  text2 = "No upcoming special dates.";
+}
+
+document.getElementById("upcoming").innerHTML = text2;
+</script>
      </footer>
    </body>
 </html>
