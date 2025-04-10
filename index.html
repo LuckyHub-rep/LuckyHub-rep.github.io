@@ -12,7 +12,7 @@
 
      </main>
      <footer>
-   <div id="next-date"></div>
+   <div id="nextDateText"></div>
 <script>
 const now = new Date();
 const todayOnly = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -55,7 +55,7 @@ if (futureSpecialDates.length > 0) {
 
 // === Final Output
 document.getElementById("combined-output").innerHTML = `
-  ${linkHtml}<br>${nextDateText}
+  ${raiding}<br>${nextDateText}
 `;
 </script>
 
