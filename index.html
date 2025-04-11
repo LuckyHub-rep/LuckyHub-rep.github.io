@@ -43,15 +43,22 @@ if (isTodaySpecial) {
 }
 document.getElementById("raiding").innerHTML = raiding;
 
-   const raidingElement = document.getElementById("raiding");
+const raidingElement = document.getElementById("raiding");
 raidingElement.innerHTML = raiding;
 
-// Remove any previous class just in case
+// Remove previous classes
 raidingElement.classList.remove("raiding-yes", "raiding-no");
 
-// Add the correct class based on value
+// Add appropriate class
 if (raiding === "YES") {
   raidingElement.classList.add("raiding-yes");
+
+  // Play fanfare sound
+  const fanfare = document.getElementById("fanfare");
+  fanfare.play().catch(err => {
+    console.log("Audio play failed:", err);
+  });
+
 } else {
   raidingElement.classList.add("raiding-no");
 }
