@@ -43,6 +43,19 @@ if (isTodaySpecial) {
 }
 document.getElementById("raiding").innerHTML = raiding;
 
+   const raidingElement = document.getElementById("raiding");
+raidingElement.innerHTML = raiding;
+
+// Remove any previous class just in case
+raidingElement.classList.remove("raiding-yes", "raiding-no");
+
+// Add the correct class based on value
+if (raiding === "YES") {
+  raidingElement.classList.add("raiding-yes");
+} else {
+  raidingElement.classList.add("raiding-no");
+}
+
 // === Feature 2: Find the next upcoming special date
 const futureSpecialDates = specialDateObjs.filter(date => date >= todayOnly);
 futureSpecialDates.sort((a, b) => a - b);
