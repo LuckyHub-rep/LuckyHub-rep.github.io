@@ -11,7 +11,6 @@ body {
 }
 
 main {
-   background-color: #23ff00;
    text-align: center;
 }
 
@@ -65,7 +64,17 @@ h1 {
 #raiding {
    text-align: center;
    font-size: 100px;
+   padding: 10px;
+   display: inline-block;
+   border-radius: 5px;
 }
+.raiding-yes {
+  background-color: green;
+}
+.raiding-no {
+  background-color: red;
+}
+
 h3 {
    margin-left: 20px;
 }
