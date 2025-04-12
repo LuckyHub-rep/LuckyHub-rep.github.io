@@ -72,7 +72,7 @@ if (raiding === "YES") {
 }
 
 // === Feature 2: Find the next upcoming special date
-const futureSpecialDates = specialDateObjs.filter(date => date >= todayOnly);
+const futureSpecialDates = specialDateObjs.filter(date => date.getTime() > todayOnly.getTime());
 futureSpecialDates.sort((a, b) => a - b);
 
 let nextDateText;
