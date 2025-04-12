@@ -61,6 +61,12 @@ if (raiding === "YES") {
 
 } else {
   raidingElement.classList.add("raiding-no");
+   
+   // Play no-raid sound
+  const noRaidSound = document.getElementById("noRaidSound");
+  noRaidSound.play().catch(err => {
+    console.log("Audio play failed:", err);
+  });
 }
 
 // === Feature 2: Find the next upcoming special date
